@@ -40,7 +40,8 @@ public class Main {
         System.out.println(body); // we have to check if it's an array or just object parameters
 
         JSONObject jsonObject = new JSONObject(body);
-        Object neededParam = jsonObject.getObjectType("neededParam-String-Key"); // להשלים ולתקן
+        Object neededParam = jsonObject.getObjectType("neededParam-String-Key"); // להשלים ולתקן את הטייפ לפי מה שהמפתח
+                                                                                 // מחזיר
         // for example:
         String text = jsonObject.getString("text");
         int idNumber = jsonObject.getInt("id");
@@ -51,7 +52,8 @@ public class Main {
         JSONArray jsonArray = new JSONArray(body);
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject JsonObject = jsonArray.getJSONObject(i);
-            Object NeededParam = JsonObject.getObjectType("neededParam-String-Key"); // להשלים ולתקן
+            Object NeededParam = JsonObject.getObjectType("neededParam-String-Key"); // להשלים ולתקן את הטייפ לפי מה
+                                                                                     // שהמפתח מחזיר
             // ....
         }
 
